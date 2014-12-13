@@ -1,0 +1,56 @@
+<html lang="en" class="js" xmlns:fb="http://www.facebook.com/2008/fbml">
+	<!--<![endif]-->
+	<head>
+		<title>Gumball Machine</title>
+		<!--<link href="/stylesheets/style.css" media="all" type="text/css" rel="stylesheet">
+		<link href="/stylesheets/review.css" media="all" type="text/css" rel="stylesheet">
+		<link href="/stylesheets/writeareview_search.css" media="all" type="text/css" rel="stylesheet">
+		<style type="text/css">
+			#businessresults .leftcol {float:left; width:270px;}
+			#businessresults .rightcol {float:left; width: 200px;}
+			#businessresults .ybtn{float: right;}
+			#businessresults .itemcategories {width:260px;}
+			#businessresults .itemneighborhoods {width:260px;}
+			.fs_pagination_controls{clear:left;}
+			#loading_bg, #loading_animation{top:2px}
+		</style>-->
+	</head>
+	<body class="country-us logged-in jquery" id="yelp_main_body" >
+		<div class="lang-en" id="wrap">
+			<span class="offscreen" id="page-content">&nbsp;</span>
+							<h2>GumBall Machines
+							</h2>
+							
+					<div id="searchPanelContainer" class="clearfix layout-block layout-a layout-border">
+							<div id="businessresults">
+						
+								<ul>
+									<% if(result != null) { for(var i = 0;i < result.length;i++) { %> 
+									<li data-key="1" class="clearfix business-summary" data-component-bound="true">
+										<div class="war-businessresult businessresult">
+											<div class="leftcol">
+												<div >
+													<%=i+1%>.&nbsp;Serial # <a href="/getInfo/<%=result[i]._id%>">&nbsp;<%=result[i].serialNumber%> 
+													</a>
+												</div>
+											</div>
+											<div class="leftcol">
+												<div >
+													Model # :<%=result[i].modelNumber%>
+												</div>
+											</div>
+											<div class="leftcol">
+												<div align="right">
+													<%=result[i].count%> Counts
+												</div>
+											</div>
+										</div>
+									</li>
+								<%} } %>
+								</ul>
+								
+							</div>
+					</div>
+		</div>
+	</body>
+</html>

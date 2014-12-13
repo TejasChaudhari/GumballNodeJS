@@ -1,0 +1,50 @@
+
+<html>
+<head>
+    <title>Welcome to Gumball Machine</title>
+</head>
+
+<body>
+<h1 align="center">Welcome Gumball Machine</h1>
+
+
+<form name="form1" method="post" action="">
+<form action= "/getInfo/<%=id%>" class="" id="signup-form" method="post" name="signup-form">
+
+<p align="center"><img src="images/gumball.jpg"  width="385" height="316"></p>
+    <p>
+
+    <div align="center">
+         <input type="hidden" value="<%=state%>" name="state">
+                                 <label class=
+                                    "placeholder-sub">Serial No &nbsp;</label>
+                                 <input id="serialNumber" name="serialNumber"
+                                    placeholder="Serial #" required="required"
+                                    type="text" readOnly value="<%=result.serialNumber%>" size="23"><br> 
+                                 <label class=
+                                    "placeholder-sub">Model No.</label>   
+                                 <input id="modelNumber" name="modelNumber"
+                                    placeholder="Model #" readOnly required="required"
+                                    type="text" value="<%=result.modelNumber%>" size="23"> 
+                                    <br>
+                                    <label class=
+                                    "placeholder-sub">Count</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                 <input id="countOfGumballs" name="count"
+                                    placeholder="Count" required=
+                                    "required" readOnly type="number" value="<%=result.count%>">
+                                     <hr>
+                                 <h2><%=Msg%></h2>
+                                 <hr>
+    </div>
+</p>
+    
+    <p align="center">
+        <input type="submit" name="event" id="btnInsertQuarter" value="Insert Quarter">
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="submit" name="event" id="btnTurnCrank" value="Turn Crank">
+    </p>
+</form>
+
+
+</body>
+</html>
